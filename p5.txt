@@ -69,18 +69,25 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 8. La trama 46 es la primera trama SIP. En un entorno como el de Internet, lo habitual es desconocer la dirección IP de la otra parte al realizar una llamada. Por eso, todo usuario registra su localización en un servidor Registrar. El Registrar guarda información sobre los usuarios en un servidor de localización que puede ser utilizado para localizar usuarios.
  ** ¿Qué dirección IP tiene el servidor Registrar?
+    IP REGITRAR=86.64.162.35
  ** ¿A qué puerto (del servidor Registrar) se envían los paquetes SIP?
+    Puerto 5060
  ** ¿Qué método SIP utiliza el UA para registrarse?
+    El método Register
  ** Además de REGISTER, ¿qué instrucciones SIP entiende el UA?
-
+       INVITE,ACK,OPTIONS,BYE,CANCEL,NOTIFY,REFER,MESSAGE
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 9. Fijémonos en las tramas siguientes a la número 46:
  ** ¿Se registra con éxito en el primer intento?
+    No se registra a la primera
  ** ¿Cómo sabemos si el registro se ha realizado correctamente o no?
+    Viendo la contestación del servidor la primera vez contesta 401 unauthorized por lo cual no le registra en la siguiente
+    peticion la respuesta es 200 OK lo que indica que te ha registrado correctamente
  ** ¿Podrías identificar las diferencias entre el primer intento y el segundo de registro? (fíjate en el tamaño de los paquetes y mira a qué se debe el cambio)
+    La diferencia entre uno y otro es el campo authorized el cual es una especie de clave que te envia el servidor en el primer rechazo de register para que puedas registrarte.
  ** ¿Cuánto es el valor del tiempo de expiración de la sesión? Indica las unidades.
 
 
