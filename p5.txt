@@ -51,15 +51,21 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 6. A continuación, hay más de una docena de tramas TCP/HTTP.
  ** ¿Podrías decir la URL que se está pidiendo?
+        URL:http://ekiga.net/ip/ que es una direccion IP en concreto la suya
  ** ¿Qué user agent (UA) la está pidiendo?
+        USER AGENT: Ekiga
  ** ¿Qué devuelve el servidor?
+        El servidor devuelve una direccion IP en concreto la 83.36.48.212
+        
  ** Si lanzamos el navegador web, por ejemplo, Mozilla Firefox, y vamos a la misma URL, ¿qué recibimos? ¿Qué es, entonces, lo que está respondiendo el servidor?
-
+    Devuelve la direccion IP del ordenador en concreto la 193.147.49.123
 
 7. Hasta la trama 45 se puede observar una secuencia de tramas del protocolo STUN.
  ** ¿Por qué crees que se hace uso de este protocolo en esta captura? Busca en la Wikipedia.
+        Porque STUN es un protocolo el cual ayuda a clientes NAT a encontrar su direccion pública lo cual es importante para 
+        establecer esta sesion ya que estamos usando una IP privada.
  ** ¿Estamos tras un NAT?
-
+        Sí.
 
 8. La trama 46 es la primera trama SIP. En un entorno como el de Internet, lo habitual es desconocer la dirección IP de la otra parte al realizar una llamada. Por eso, todo usuario registra su localización en un servidor Registrar. El Registrar guarda información sobre los usuarios en un servidor de localización que puede ser utilizado para localizar usuarios.
  ** ¿Qué dirección IP tiene el servidor Registrar?
