@@ -30,17 +30,23 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 4. Observa por encima el flujo de tramas en el menú de Statistics en IO Graphs. La captura que estamos viendo incluye desde la inicialización (registro) de la aplicación hasta su finalización, con una llamada entremedias.
  ** Filtra por sip para conocer cuándo se envían paquetes SIP. ¿En qué segundos tienen lugar esos envíos?
+    SIP aparece en los segundos 7,14,16,38,39,55 
  ** Y los paquetes con RTP, ¿cuándo se envían?
-
+    Del segundo 17 al 38 se envian paquetes RTP excluyendo el segundo 22
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 5. Analiza las primeras cuatro tramas de la captura nada más arrancar Ekiga.
  ** ¿Qué servicio es el utilizado en estas tramas?
+        El protocolo DNS
  ** ¿Cuál es la dirección IP del servidor de nombres del ordenador que ha lanzado Ekiga?
+       El servidor de nombres usa la direccion IP 80.58.61.250
  ** ¿Qué dirección IP (de ekiga.net) devuelve el servicio de nombres?
+        La direccion devuelta 86.64.162.35
  ** ¿Por qué se pide también para 35.162.64.86.in-addr.arpa?
+        Es una peticion dns inversa es decir enviamos una direccion IP y preguntamos por el nombre, al contrario que normalmente
+        que pedimos una direccion IP 
 
 
 6. A continuación, hay más de una docena de tramas TCP/HTTP.
