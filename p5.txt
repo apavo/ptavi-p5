@@ -120,22 +120,33 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 12. Vamos a ver más a fondo el intercambio RTP. En Telephony hay una opción RTP. Empecemos mirando los flujos RTP.
  ** ¿Cuántos flujos hay? ¿por qué?
+       Aparecen dos flujos RTP debido a que uno se usa para audio y otro para video
  ** ¿Cuántos paquetes se pierden?
+        No se pierde ningun paquete
  ** ¿Cuál es el valor máximo del delta? ¿Y qué es lo que significa el valor de delta?
+        1290,48 ms. Significa el máximo retardo que podemos tener de un paquete
  ** ¿Cuáles son los valores de jitter (medio y máximo)? ¿Qué quiere decir eso? ¿Estamos ante una conversación de calidad?
-
+        Para el primer flujo tenemos un jitter maximo de 183,10 ms y medio de 153,24 ms. Para el segundo flujo el maximo es de 119,64 y
+        el medio de 42,50. El jitter indica la variacion del retardo hay bastante diferencia entre uno y otro flujo por lo cual la calidad no
+        es demasiado alta.
 
 13. Elige un paquete RTP de audio. Analiza el flujo de audio en Telephony -> RTP -> Stream Analysis.
  ** ¿Cuánto valen el delta y el jitter para el primer paquete que ha llegado?
+        0.00 para ambos casos
  ** ¿Podemos saber si éste es el primer paquete que nos han enviado?
+        Si por el numero de secuencia.
  ** Los valores de jitter son menores de 10ms hasta un paquete dado. ¿Cuál?
+        Hasta el paqeute numero 4(seq 116)
  ** ¿A qué se debe el cambio tan brusco del jitter?
+        Porque el valor de la delta aumenta notablemente y esto a su vez afecta al jitter
  ** ¿Es comparable este cambio con el tiempo desde la recepción del paquete anterior? ¿Por qué?
+        Si porque el jitter depende de la delta
  ** ¿Cuál es la dependencia entre el tiempo transcurrido desde el paquete anterior y el valor de jitter?
-
+        1/16 por la formula
 
 14. En Telephony selecciona el menú VoIP calls. Verás que se lista la llamada de voz IP capturada en una ventana emergente. Selecciona esa llamada y pulsa el botón Graph.
  ** ¿Cuánto dura la conversación?
+        
  ** ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
 
 
