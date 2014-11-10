@@ -58,7 +58,7 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
         El servidor devuelve una direccion IP en concreto la 83.36.48.212
         
  ** Si lanzamos el navegador web, por ejemplo, Mozilla Firefox, y vamos a la misma URL, ¿qué recibimos? ¿Qué es, entonces, lo que está respondiendo el servidor?
-    Devuelve la direccion IP del ordenador en concreto la 193.147.49.123
+    Devuelve la direccion IP pública del ordenador en concreto la 193.147.49.123
 
 7. Hasta la trama 45 se puede observar una secuencia de tramas del protocolo STUN.
  ** ¿Por qué crees que se hace uso de este protocolo en esta captura? Busca en la Wikipedia.
@@ -178,6 +178,7 @@ Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.ne
 
 17. Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
  ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
+        Sí, para buscar las direcciones
  ** ¿Son diferentes el registro y la descripción de la sesión?
         El registro es el mismo se usan dos Register la diferencia es al finalizar la sesión que solo se usa un BYE
 
