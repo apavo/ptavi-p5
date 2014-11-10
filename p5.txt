@@ -185,7 +185,7 @@ Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.ne
  ** ¿Cuántos flujos tenemos?
         Tenemos un solo flujo el de audio uno enviado porcel contacto al que llamamos y otro por nosotros
  ** ¿Cuál es su periodicidad?
-        
+        La periricidad es 20 ms aproximadamente
  ** ¿Cuánto es el valor máximo del delta y los valores medios y máximo del jitter?
         El valor maximo de delta es 23,49 para el contacto y 23,65 para nosotros. Valores maximos 0,94 para el contacto  y 0,96 para nosotros y medios 0,27 para el contacto  y 0,23 para nosotros
  ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo? Comprueba que poniendo un valor demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
