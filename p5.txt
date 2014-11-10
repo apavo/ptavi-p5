@@ -185,11 +185,14 @@ Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.ne
  ** ¿Cuántos flujos tenemos?
         Tenemos un solo flujo el de audio uno enviado porcel contacto al que llamamos y otro por nosotros
  ** ¿Cuál es su periodicidad?
+        
  ** ¿Cuánto es el valor máximo del delta y los valores medios y máximo del jitter?
         El valor maximo de delta es 23,49 para el contacto y 23,65 para nosotros. Valores maximos 0,94 para el contacto  y 0,96 para nosotros y medios 0,27 para el contacto  y 0,23 para nosotros
  ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo? Comprueba que poniendo un valor demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
+    Sí, seleccionamos un paquete RTP de audio pichamos en Telephony Voip Calls se nos abirar una ventana seleccionamos el flujo
+    de audio y pinchamos en player tras esto pinchamos en decode y reproducimos el audio
  ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net?
-
+    Es un servicio el cual sirve para hacer captursa te coje la llamada y te devuelve un audio para realizar pruebas.
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
